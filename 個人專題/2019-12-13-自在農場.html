@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自在農場</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        .tittle {
+            text-align: center;
+            font-size: 60px;
+            color: #D66B6B;
+        }
+
+        h1 {
+            line-height: 100px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .seperate {
+            width: 100%;
+            height: 100px;
+        }
+
+        .nav {
+            width: 100%;
+            height: 150px;
+
+            background-color: blue;
+            display: flex;
+            z-index: 999;
+        }
+
+        .box-1 {
+            width: 12.5%;
+            height: 150px;
+        }
+
+        .logo {
+            width: 8%;
+            height: 150px;
+            background-image: url('/img/cow-logo.png');
+            background-size: cover;
+            background-position: center;
+            background-color: brown;
+        }
+
+        .container {
+            width: 64%;
+            height: 150px;
+            background-color: chartreuse;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .bottonbox {
+            width: 75%;
+            height: 90px;
+            background-color: cornflowerblue;
+
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .Botton {
+            color: red;
+            font-size: 30px;
+            justify-content: space-around;
+        }
+
+        .box-2 {
+            width: 15.5%;
+            height: 150px;
+        }
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        #banner {
+            width: 100%;
+            height: 930px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+
+        .news {
+            width: 100%;
+            height: 770px;
+            background-color: darkgray;
+            display: flex;
+            justify-content: center;
+        }
+
+        .pack {
+            width: 58%;
+            height: 100%;
+            background-color: deeppink;
+
+        }
+
+        .information {
+            width: 100%;
+            height: 835px;
+            background-color: darkorange;
+            display: flex;
+            justify-content: center;
+        }
+
+        .date {
+            width: 59%;
+            height: 100%;
+            background-color: grey;
+        }
+
+        .nat {
+            width: 100%;
+            background-color: darksalmon;
+            display: flex;
+            justify-content: center;
+        }
+
+        .ani {
+            width: 59%;
+            height: 1140px;
+            background-color: khaki;
+            border-radius: 50%;
+        }
+
+        .plant {
+            width: 100%;
+            height: 1080px;
+            background-color: lawngreen;
+        }
+
+        .surr {
+            width: 100%;
+            height: 1075px;
+            background-color: lightblue;
+        }
+
+        .land {
+            width: 100%;
+            height: 960px;
+            background-color: lightgray;
+        }
+
+        .traffic {
+            width: 100%;
+            height: 1350px;
+            background-color: lightsteelblue;
+
+        }
+
+        .map {
+            width: 59%;
+            height: 38%;
+            background-color: limegreen;
+            margin: auto;
+        }
+
+        .way {
+            width: 59%;
+            height: 38%;
+            background-color: maroon;
+            margin: auto;
+        }
+
+        .graph {
+            width: 100%;
+            height: 760px;
+            background-color: mediumseagreen;
+        }
+
+        .goods {
+            width: 100%;
+            height: 1010px;
+            background-color: cornflowerblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrap {
+            width: 980px;
+            height: 750px;
+        }
+
+        .dairy {
+            width: 25%;
+            height: 65px;
+            background-color: darkorchid;
+            float: left;
+        }
+
+        .essential {
+            width: 25%;
+            height: 65px;
+            background-color: darksalmon;
+            float: right;
+        }
+
+        .item {
+            width: 100%;
+            height: 665px;
+            background-color: greenyellow;
+            float: left;
+        }
+
+        .camping {
+            width: 100%;
+            height: 1460px;
+            background-color: yellow;
+
+        }
+
+        .picture {
+            width: 59%;
+            height: 700px;
+            margin: auto;
+        }
+
+        .pic-note {
+            width: 59%;
+            height: 300px;
+            margin: auto;
+            z-index: 5555;
+        }
+
+        .note {
+            width: 59%;
+            height: 435px;
+            margin: auto;
+        }
+
+        .note-1 {
+            width: 18%;
+            font-size: 36px;
+            float: left;
+        }
+
+        .note-2 {
+            width: 100%;
+            font-size: 36px;
+        }
+        .service{
+            width: 59%;
+            height: 730px;
+            background-color: blue;
+            margin: auto;
+        }
+        .safe{
+            width: 100%;
+            height: 70px;
+            background-color: aqua;
+            font-size: 36px;
+            text-align: center;
+            line-height: 70px;
+        }
+        .insurance{
+            width: 100%;
+            height: 70px;
+            background-color:brown;
+            font-size: 36px;
+            text-align: center;
+            line-height: 70px;
+        }
+        .manage{
+            width: 100%;
+            height: 70px;
+            background-color:chocolate;
+            font-size: 36px;
+            text-align: center;
+            line-height: 70px;
+        }
+        .mail{
+            width: 100%;
+            height: 530px;
+            background-color: darkolivegreen;
+            font-size: 48px;
+            text-align: center;
+        }
+        .contact{
+            width: 50%;
+            height: 430px;
+            background-color: darkorange;
+            margin: auto;
+        }
+        .problem{
+            width: 59%;
+            height: 700px;
+            background-color: darksalmon;
+            margin: auto;
+            font-size: 48px;
+            text-align: center;
+
+        }
+        .question-1{
+            width: 100%;
+            height: 50px;
+            background-color: blueviolet;
+            font-size: 36px;
+            text-align: start;
+        }
+        .answer-1{
+            width: 100%;
+            font-size: 36px;
+            text-align: start;
+        }
+        .question-2{
+            width: 100%;
+            height: 50px;
+            background-color:burlywood;
+            font-size: 36px;
+            text-align: start;
+        }
+        .answer-2{
+            width: 100%;
+            font-size: 36px;
+            text-align: start;
+        }
+        .question-3{
+            width: 100%;
+            height: 50px;
+            background-color:chocolate;
+            font-size: 36px;
+            text-align: start;
+        }
+        .answer-3{
+            width: 100%;
+            font-size: 36px;
+            text-align: start;
+        }
+        .more{
+            text-align: center;
+            font-size: 24px;
+        }
+        .footer{
+            width: 100%;
+            height: 440px;
+            background-color: forestgreen;
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="nav">
+        <div class="box-1"></div>
+        <div class="logo"></div>
+        <div class="container">
+            <div class="bottonbox">
+                <a href="#A" class="Botton">園區資訊</a>
+                <a href="#B" class="Botton">自然景觀</a>
+                <a href="#C" class="Botton">交通方式</a>
+                <a href="#D" class="Botton">特色產品</a>
+                <a href="#E" class="Botton">露營體驗</a>
+                <a href="#F" class="Botton">便民服務</a>
+
+            </div>
+        </div>
+        <div class="box-2"></div>
+    </div>
+
+
+    <div id="banner" class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/img/農場草原羊(修).jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/img/5534915284_788452db30_3k.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/img/擠牛奶.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/img/牛吃草.jpg" alt=""></div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <div class="seperate"></div>
+    <div class="tittle">園區資訊</div>
+    <div class="news">
+        <div class="pack">
+
+        </div>
+    </div>
+
+
+
+    <div class="information">
+        <div class="date">
+            <h1>最新消息</h1>
+        </div>
+    </div>
+
+    <div class="seperate"></div>
+    <div class="tittle">自然景觀</div>
+    <h1>動物 Animalia</h1>
+
+    <div class="nat">
+
+        <div class="ani"></div>
+
+    </div>
+    <div class="seperate"></div>
+    <div class="plant">
+        <h1>植物 Plantae</h1>
+    </div>
+    <div class="seperate"></div>
+    <h1>環境 Surroundings</h1>
+    <div class="surr"></div>
+
+    <div class="land">
+        <h1>風景 Landscape</h1>
+    </div>
+
+    <div class="seperate"></div>
+    <div class="tittle">交通方式</div>
+
+    <div class="traffic">
+        <div class="map"></div>
+        <div class="way"></div>
+
+    </div>
+    <h1>地圖簡介</h1>
+
+    <div class="graph"></div>
+
+    <div class="seperate"></div>
+    <div class="tittle">特色產品</div>
+    <div class="goods">
+        <div class="wrap">
+            <div class="dairy"></div>
+            <div class="essential"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+
+    <div class="tittle">露營體驗</div>
+
+    <div class="camping">
+
+        <div class="picture">
+
+            <div id="banner" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+
+        </div>
+        <div class="pic-note">
+
+        </div>
+
+        <div class="note">
+            <div class="note-1">
+                <span>露營時間</span>
+                <br>
+                <br>
+                <span>可攜物品</span>
+                <br>
+                <br>
+                <span>注意事項</span>
+                <br>
+                <br>
+                <span>拖車出租</span>
+                <br>
+                <br>
+                <span>帳篷出租</span>
+            </div>
+            <div class="note-2">
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;下午3點至隔日中午12點</span>
+                <br>
+                <br>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;1.防蚊液&nbsp;&nbsp;2.睡袋&nbsp;&nbsp;3.照明工具&nbsp;&nbsp;4.摺疊桌&nbsp;&nbsp;5.換洗衣物</span>
+                <br>
+                <br>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;1.確定露營人數即年齡&nbsp;&nbsp;2.打理裝備確實&nbsp;&nbsp;3.營地的選擇</span>
+                <br>
+                <br>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;露營區拖車(出租)，假日3600元/輛，平日3000元/輛</span>
+                <br>
+                <br>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;草地帳篷營位(出租)，假日650元/位，平日450元/位</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="tittle">便民服務</div>
+    <h1>旅客須知</h1>
+
+    <div class="service">
+        <div class="safe">自在農場安全須知</div>
+        <div class="insurance">遊憩區投保公共安全責任險</div>
+        <div class="manage">合法經營</div>
+    </div>
+
+    <div class="mail">
+        客服信箱
+        <div class="contact"></div>
+    </div>
+    <div class="seperate"></div>
+
+    <div class="problem">
+        常見問題
+        <div class="question-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q1.自在農場可以使用「國民旅遊卡」嗎?</div>
+        <div class="answer-1"> 清境農場國民賓館及青青草原為國民旅遊卡特約商店，凡住宿（附青青草原及小瑞士花園門票）、用餐，購買紀念品均可使用國民旅遊卡。</div>
+        <div class="question-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q2.自在農場商品是否可以退貨?</div>
+        <div class="answer-2">根據照消費者保護法規定，消費者享有商品到貨後七天猶豫期之權益。</div>
+        <div class="question-3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q3.農場是否有提供導覽解說?</div>
+        <div class="answer-3">本場有志工提供帶團導覽解說服務(須15人以上)預約流程：團體申請後→申請人致電本場→承辦人電話再次確認行程地點及時間→安排導覽員</div>
+        <div class="more">更多Q&A</div>
+    </div>
+
+
+    <div class="footer">
+
+        <div class="bottonbox">
+            <a href="#A" class="Botton">園區資訊</a>
+                <a href="#B" class="Botton">自然景觀</a>
+                <a href="#C" class="Botton">交通方式</a>
+                <a href="#D" class="Botton">特色產品</a>
+                <a href="#E" class="Botton">露營體驗</a>
+                <a href="#F" class="Botton">便民服務</a>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+
+
+</body>
+
+</html>
