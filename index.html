@@ -1,0 +1,2349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自在農場</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .tittle {
+            text-align: center;
+            font-size: 60px;
+            color: #D66B6B;
+            font-family: 微軟正黑體;
+        }
+
+        h1 {
+            line-height: 100px;
+            text-align: center;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .seperate {
+            width: 100%;
+            height: 100px;
+        }
+
+        .nav {
+            width: 100%;
+            height: 150px;
+            display: flex;
+        }
+
+        .box-1 {
+            width: 14%;
+            height: 150px;
+        }
+
+        .ham {
+            width: 100px;
+            height: 100px;
+            background-image: url('./img/漢堡條-黑.png');
+            background-size: cover;
+            background-position: center;
+            display: none;
+        }
+
+        .menu {
+            width: 30%;
+            background-color: #0A2818;
+            display: none;
+            text-align: center;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            background-image: url('./img/logo牛.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .logo-word {
+            width: 175px;
+            height: 150px;
+            background-image: url('./img/logo字.png');
+            background-size: cover;
+            background-position: center;
+            float: left;
+        }
+
+        .container {
+            width: 64%;
+            height: 150px;
+        }
+
+        .bottonbox {
+            width: 75%;
+            height: 90px;
+            margin-top: 60px;
+            float: right;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .Botton {
+            color: #0A2818;
+            font-size: 30px;
+            font-family: 微軟正黑體;
+        }
+
+        .Botton:hover {
+            color: #09AF19;
+        }
+
+        .box-2 {
+            width: 14%;
+            height: 150px;
+        }
+
+        #img-1 {
+            width: 100%;
+            height: 100%;
+            background-image: url('./img/草原羊72.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #img-1 span {
+            font-size: 60px;
+            color: white;
+            font-family: 標楷體;
+            position: absolute;
+            top: 200px;
+            text-shadow: #000 10px 10px 10px;
+        }
+
+        #img-2 {
+            width: 100%;
+            height: 100%;
+            background-image: url("./img/羊女孩.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #img-2 span {
+            font-size: 60px;
+            font-weight: 900;
+            color: white;
+            font-family: 標楷體;
+            position: absolute;
+            top: 400px;
+            text-shadow: #000 10px 10px 10px;
+        }
+
+        #img-3 {
+            width: 100%;
+            height: 100%;
+            background-image: url('./img/擠奶.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #img-3 span {
+            font-size: 60px;
+            color: white;
+            font-family: 標楷體;
+            position: absolute;
+            top: 200px;
+            text-shadow: #000 10px 10px 10px;
+        }
+
+        #img-4 {
+            width: 100%;
+            height: 100%;
+            background-image: url('./img/吃草.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #img-4 span {
+            font-size: 60px;
+            color: white;
+            font-family: 標楷體;
+            position: absolute;
+            top: 200px;
+            text-shadow: #000 10px 10px 10px;
+        }
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            min-width: 1920px;
+        }
+
+        #banner {
+            width: 100%;
+            height: 930px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+
+        .news {
+            width: 100%;
+            height: 770px;
+            background-image: url('./img/柵欄改.png');
+            background-size: cover;
+            background-position: center;
+            min-width: 1920px;
+        }
+
+        .pack {
+            width: 59%;
+            height: 100%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .card-1 {
+            width: 500px;
+            height: 600px;
+            background-color: rgba(200, 200, 200, 0.9);
+            border-radius: 10%;
+            text-align: left;
+            float: left;
+
+        }
+
+        .card-1 ol li {
+            font-size: 24px;
+            line-height: 50px;
+        }
+
+        .card-2 {
+            width: 500px;
+            height: 600px;
+            background-color: rgba(200, 200, 200, 0.9);
+            border-radius: 10%;
+            float: right;
+        }
+
+        .card-2 ol li {
+            font-size: 24px;
+            line-height: 50px;
+            text-align: left;
+        }
+
+        .information {
+            width: 100%;
+            height: 735px;
+            display: flex;
+            justify-content: center;
+            background-image: url('./img/牛對談.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .mask {
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.75);
+            display: flex;
+            justify-content: center;
+        }
+
+        .date {
+            width: 59%;
+            height: 100%;
+            z-index: 99;
+            font-size: 48px;
+            font-family: 微軟正黑體;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .date span {
+            line-height: 200px;
+        }
+
+        .event {
+            width: 100%;
+            height: 120px;
+            border-top: solid 2px black;
+            border-bottom: solid 2px black;
+            text-align: left;
+        }
+
+        .event:hover {
+            background-color: #C1F490;
+        }
+
+        .event span {
+            font-size: 30px;
+            line-height: 120px;
+            text-decoration: none;
+        }
+
+        .more {
+            width: 190px;
+            height: 60px;
+            background-color: #C1F490;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 24px;
+            margin: auto;
+            line-height: 60px;
+        }
+
+        .nat {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-image: url('./img/雜草72.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ani {
+            width: 59%;
+            height: 1140px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .dog {
+            width: 440px;
+            height: 440px;
+            background-image: url('./img/牧羊犬-1.jpg');
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            float: left;
+        }
+
+        .dog-detailed {
+            width: 100%;
+            height: 100%;
+            padding: 100px;
+            background-color: rgba(200, 200, 200, 0.9);
+            display: none;
+        }
+
+        .dog-detailed h2 {
+            text-align: center;
+        }
+
+        .dog-word {
+            width: 440px;
+            height: 440px;
+            background-image: url('./img/狗+字.png');
+            display: none;
+        }
+
+
+        .dog:hover .dog-word {
+            display: block;
+        }
+
+        .sheep {
+            width: 440px;
+            height: 440px;
+            background-image: url('./img/綿羊-1.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            float: left;
+        }
+
+        .sheep-detailed {
+            width: 100%;
+            height: 100%;
+            padding: 100px;
+            background-color: rgba(200, 200, 200, 0.9);
+            display: none;
+        }
+
+        .sheep-detailed h2 {
+            text-align: center;
+        }
+
+        .sheep-word {
+            width: 440px;
+            height: 440px;
+            background-image: url('./img/羊+字.png');
+            display: none;
+        }
+
+
+        .sheep:hover .sheep-word {
+            display: block;
+        }
+
+        .sqiurrel {
+            width: 440px;
+            height: 440px;
+            background-color: #006934;
+            background-image: url('./img/松鼠.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            float: right;
+        }
+
+        .sqiurrel-detailed {
+            width: 100%;
+            height: 100%;
+            padding: 100px;
+            background-color: rgba(200, 200, 200, 0.9);
+            display: none;
+        }
+
+        .sqiurrel-detailed h2 {
+            text-align: center;
+        }
+
+        .sqiurrel-word {
+            width: 440px;
+            height: 440px;
+            background-image: url('./img/松鼠+字.png');
+            display: none;
+        }
+
+
+        .sqiurrel:hover .sqiurrel-word {
+            display: block;
+        }
+
+        .cow {
+            width: 440px;
+            height: 440px;
+            background-color: #006934;
+            background-image: url('./img/乳牛-3.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            float: right;
+        }
+
+        .cow-detailed {
+            width: 100%;
+            height: 100%;
+            padding: 100px;
+            background-color: rgba(200, 200, 200, 0.9);
+            display: none;
+        }
+
+        .cow-detailed h2 {
+            text-align: center;
+        }
+
+        .cow-word {
+            width: 440px;
+            height: 440px;
+            background-image: url('./img/牛+字.png');
+            display: none;
+        }
+
+
+        .cow:hover .cow-word {
+            display: block;
+        }
+
+        .plant {
+            width: 100%;
+            height: 100vh;
+            background-color: #E0F4DC;
+        }
+
+        .kikuyu-all {
+            width: 100%;
+            height: calc(33% - 33px);
+        }
+
+        .kikuyu-all h1 {
+            font-size: 40px;
+        }
+
+        .kikuyu-all h4{
+            font-size: 24px;
+            text-align: left;
+        }
+
+        .kikuyu {
+            width: 48%;
+            height: 100%;
+            background-image: url('./img/狼尾草.jpg');
+            float: left;
+        }
+
+        .cedar-all {
+            width: 100%;
+            height: calc(34% - 34px);
+        }
+
+        .cedar-all h1 {
+            font-size: 40px;
+        }
+
+        .cedar-all h4 {
+            font-size: 24px;
+            text-align: left;
+        }
+
+        .cedar {
+            width: 52%;
+            height: 100%;
+            background-image: url('./img/肖楠72.jpg');
+            background-size: cover;
+            float: right;
+        }
+
+        .ivy-all {
+            width: 100%;
+            height: calc(33% - 33px);
+        }
+
+        .ivy-all h1 {
+            font-size: 40px;
+        }
+
+        .ivy-all h4 {
+            font-size: 24px;
+            text-align: left;
+        }
+
+        .ivy {
+            width: 48%;
+            height: 100%;
+            background-image: url('./img/常春藤72.jpg');
+            background-size: cover;
+            float: left;
+        }
+
+        .surr {
+            width: 100%;
+            height: 1075px;
+            background-color: lightblue;
+            background-image: url('./img/飛牛牧場72.jpg');
+        }
+
+        .mask-sur {
+            width: 100%;
+            height: 1075px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .farm {
+            width: 59%;
+            height: 330px;
+            margin: auto;
+        }
+
+        .farm-1 {
+            width: 550px;
+            height: 330px;
+            background-image: url('./img/澳洲農場圖1.jpg');
+            background-size: cover;
+            background-position: center;
+            float: left;
+        }
+
+        .farm-2 {
+            width: 510px;
+            height: 330px;
+            background-image: url('./img/澳洲農場圖2.jpg');
+            background-size: cover;
+            background-position: center;
+            float: right;
+        }
+
+        .farm-3 {
+            width: 59%;
+            height: 625px;
+            background-image: url('./img/澳洲農場圖3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: hotpink;
+            margin: auto;
+            position: relative;
+            top: 50px;
+        }
+
+        .land {
+            width: 100%;
+            height: 960px;
+            background-color: #F2F2F2;
+        }
+
+        .land-pack {
+            width: 59%;
+            height: calc(100% - 100px);
+            margin: auto;
+        }
+
+        .butterfly {
+            width: 40%;
+            height: 310px;
+            background-image: url('./img/大自然劇場72.jpg');
+            background-size: cover;
+            background-position: center;
+            float: left;
+            box-shadow: 10px 10px 30px black;
+            border-radius: 5%;
+        }
+
+        .butterfly:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        .butterfly-word {
+            width: 40%;
+            height: 100px;
+            text-align: center;
+            float: left;
+            font-size: 36px;
+            line-height: 80px;
+        }
+
+        .ranch {
+            width: 40%;
+            height: 310px;
+            background-image: url('./img/觀山牧區72.jpg');
+            background-size: cover;
+            background-position: center;
+            float: right;
+            box-shadow: 10px 10px 30px black;
+            border-radius: 5%;
+        }
+
+        .ranch:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        .ranch-word {
+            width: 40%;
+            height: 100px;
+            text-align: center;
+            float: right;
+            font-size: 36px;
+            line-height: 80px;
+        }
+
+        .garden {
+            width: 40%;
+            height: 310px;
+            background-image: url('./img/小瑞士花園72.jpg');
+            background-size: cover;
+            background-position: center;
+            float: left;
+            clear: both;
+            box-shadow: 10px 10px 30px black;
+            border-radius: 5%;
+        }
+
+        .garden:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        .garden-word {
+            width: 40%;
+            height: 100px;
+            text-align: center;
+            float: left;
+            font-size: 36px;
+            line-height: 80px;
+        }
+
+        .sky {
+            width: 40%;
+            height: 310px;
+            background-image: url('./img/天空步道.jpg');
+            background-size: cover;
+            background-position: center;
+            float: right;
+            box-shadow: 10px 10px 30px black;
+            border-radius: 5%;
+        }
+
+        .sky:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        .sky-word {
+            width: 40%;
+            height: 100px;
+            text-align: center;
+            float: right;
+            font-size: 36px;
+            line-height: 80px;
+        }
+
+        .traffic {
+            width: 100%;
+            height: 1350px;
+            background-image: url('./img/南投客運背景72.jpg');
+            background-position: 100% 130%;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+        }
+
+        .bus {
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+        .map {
+            width: 59%;
+            height: 38%;
+            margin: auto;
+        }
+
+        .way {
+            width: 59%;
+            height: 38%;
+
+            margin: auto;
+        }
+
+        table {
+            border: 1px solid #000;
+            font-family: 微軟正黑體;
+            font-size: 16px;
+            width: 100%;
+            border: 1px solid #000;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #5A9C01;
+            padding: 10px;
+            border: 1px solid #000;
+            color: #fff;
+        }
+
+        td {
+            border: 1px solid #000;
+            padding: 30px;
+        }
+
+        .graph {
+            width: 100%;
+            height: 760px;
+        }
+
+        .small-map {
+            width: 60%;
+            height: 100%;
+            background-image: url('./img/農場地圖簡介72.jpg');
+            background-size: contain;
+            background-position: center;
+            margin: auto;
+            border: #5A9C01 5px solid;
+        }
+
+        .goods {
+            width: 100%;
+            height: 1010px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('./img/牛比讚.png');
+            background-size: contain;
+            background-position: right;
+            background-repeat: no-repeat;
+        }
+
+        #tabs-nav {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            text-align: left
+        }
+
+        a.tabs-menu {
+
+            display: inline-block;
+            background-color: #86CE57;
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+            padding: 5px 10px;
+            text-shadow: 1px 1px 0px #86CE57;
+            font-weight: bold;
+            text-decoration: none;
+            border: solid 1px #86CE57;
+            border-bottom: 0;
+            border-radius: 50% 50% 0 0;
+            font-size: 36px;
+            padding: 10px;
+        }
+
+        a.tabs-menu.tabs-menu-active {
+            background-color: #D0F9C2;
+            text-shadow: 1px 1px 0px #D0F9C2;
+            border: solid 1px #86CE57;
+            color: #6b6b6b;
+            border-bottom: 0;
+            font-size: 36px;
+            padding: 10px;
+        }
+
+        .tabs-container {
+            min-width: 1080px;
+            border: solid 1px #86CE57;
+            margin-top: -1px;
+            background-color: #D0F9C2;
+            overflow: hidden;
+        }
+
+        .tabs-panel {
+            display: none;
+            width: 100%;
+            min-height: 670px;
+            overflow: auto;
+            padding: 10px;
+            max-height: 200px;
+        }
+
+        .milk {
+            width: 33.3%;
+            height: 270px;
+            background-image: url('./img/牛奶72.png');
+            background-size: cover;
+            background-position: center;
+            float: left;
+        }
+
+        .milk-word {
+            width: 33.3%;
+            font-size: 36px;
+            padding: 5px;
+            text-align: center;
+            float: left;
+            background-color: #86CE57;
+        }
+
+        .goat {
+            width: 33.3%;
+            height: 270px;
+            background-image: url('./img/羊奶72.png');
+            background-size: cover;
+            background-position: center;
+            float: left;
+        }
+
+        .goat-word {
+            width: 33.3%;
+            font-size: 36px;
+            padding: 5px;
+            text-align: center;
+            float: left;
+            background-color: #86CE57;
+        }
+
+        .cream {
+            width: 33.3%;
+            height: 270px;
+            background-image: url('./img/奶油72.jpg');
+            background-size: cover;
+            background-position: center;
+            float: right;
+        }
+
+        .cream-word {
+            width: 33.3%;
+            font-size: 36px;
+            padding: 5px;
+            text-align: center;
+            float: right;
+            background-color: #86CE57;
+        }
+
+        .cheese {
+            width: 33.3%;
+            height: 270px;
+            background-image: url('./img/起司72.jpg');
+            background-size: cover;
+            background-position: center;
+            float: left;
+        }
+
+        .cheese-word {
+            width: 33.3%;
+            font-size: 36px;
+            padding: 5px;
+            text-align: center;
+            float: left;
+            background-color: #86CE57;
+        }
+
+        .condensed {
+            width: 33.3%;
+            height: 270px;
+            background-image: url('./img/煉乳72.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            float: left;
+        }
+
+        .condensed-word {
+            width: 33.3%;
+            font-size: 36px;
+            padding: 5px;
+            text-align: center;
+            float: left;
+            background-color: #86CE57;
+        }
+
+        .jelly {
+            width: 33.3%;
+            height: 270px;
+            background-image: url('./img/奶酪72.jpg');
+            background-size: cover;
+            background-position: center;
+            float: right;
+        }
+
+        .jelly-word {
+            width: 33.3%;
+            font-size: 36px;
+            padding: 5px;
+            text-align: center;
+            float: right;
+            background-color: #86CE57;
+        }
+
+        .lavender {
+            width: 50%;
+            height: 270px;
+            background-image: url('./img/薰衣草精油.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            float: left;
+        }
+
+        .lavender-word {
+            width: 50%;
+            font-size: 36px;
+            padding: 10px;
+            text-align: center;
+            float: left;
+            background-color: #86CE57;
+        }
+
+        .tea {
+            width: 50%;
+            height: 270px;
+            background-image: url('./img/茶樹精油.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            float: right;
+        }
+
+        .tea-word {
+            width: 50%;
+            font-size: 36px;
+            padding: 10px;
+            text-align: center;
+            float: right;
+            background-color: #86CE57;
+        }
+
+        .lemon {
+            width: 50%;
+            height: 270px;
+            background-image: url('./img//檸檬精油.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            float: left;
+        }
+
+        .lemon-word {
+            width: 50%;
+            font-size: 36px;
+            padding: 10px;
+            text-align: center;
+            float: left;
+            background-color: #86CE57;
+        }
+
+        .mint {
+            width: 50%;
+            height: 270px;
+            background-image: url('./img/薄荷精油.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            float: right;
+        }
+
+        .mint-word {
+            width: 50%;
+            font-size: 36px;
+            padding: 10px;
+            text-align: center;
+            float: right;
+            background-color: #86CE57;
+        }
+
+        .camping {
+            width: 100%;
+            height: 1500px;
+            background-image: url('./img/露營背景.png');
+        }
+
+        .picture {
+            width: 59%;
+            height: 700px;
+            margin: auto;
+        }
+
+        #camping-1 {
+            background-image: url('./img/露營-1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #camping-2 {
+            background-image: url('./img/露營-2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #camping-3 {
+            background-image: url('./img/露營車-1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #camping-4 {
+            background-image: url('./img/露營車內-1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .pic-note {
+            width: 59%;
+            height: 300px;
+            margin: auto;
+            z-index: 5555;
+        }
+
+        .note {
+            width: 59%;
+            height: 435px;
+            margin: auto;
+        }
+
+        .note-1 {
+            width: 18%;
+            font-size: 36px;
+            float: left;
+        }
+
+        .note-2 {
+            width: 100%;
+            font-size: 36px;
+        }
+
+        .service {
+            width: 59%;
+            margin: auto;
+        }
+
+        #safe {
+            width: 100%;
+            height: 70px;
+            background-color: #4B996B;
+            font-size: 36px;
+            text-align: center;
+            line-height: 70px;
+            text-decoration: none;
+        }
+
+        #insurance {
+            width: 100%;
+            height: 70px;
+            background-color: #4B996B;
+            font-size: 36px;
+            text-align: center;
+            line-height: 70px;
+            text-decoration: none;
+        }
+
+        #manage {
+            width: 100%;
+            height: 70px;
+            background-color: #4B996B;
+            font-size: 36px;
+            text-align: center;
+            line-height: 70px;
+            text-decoration: none;
+        }
+
+        .card-body ul li {
+            font-size: 24px;
+        }
+
+        .mail {
+            width: 100%;
+            height: 450px;
+            background-color: #006934;
+            font-size: 48px;
+            text-align: center;
+        }
+
+        .contact {
+            width: 50%;
+            height: 430px;
+            margin: auto;
+        }
+
+        .contact h2 {
+            text-align: left;
+            color: white;
+            line-height: 50px;
+        }
+
+        .problem {
+            width: 59%;
+            height: 700px;
+            margin: auto;
+            font-size: 48px;
+            text-align: center;
+        }
+
+        #question-1 {
+            width: 100%;
+            height: 50px;
+            background-color: #A0A0F9;
+            font-size: 36px;
+            text-align: start;
+        }
+
+        #answer-1 {
+            width: 100%;
+            font-size: 36px;
+            text-align: start;
+        }
+
+        #question-2 {
+            width: 100%;
+            height: 50px;
+            background-color: #A0A0F9;
+            font-size: 36px;
+            text-align: start;
+        }
+
+        #answer-2 {
+            width: 100%;
+            font-size: 36px;
+            text-align: start;
+        }
+
+        #question-3 {
+            width: 100%;
+            height: 50px;
+            background-color: #A0A0F9;
+            font-size: 36px;
+            text-align: start;
+        }
+
+        #answer-3 {
+            width: 100%;
+            font-size: 36px;
+            text-align: start;
+        }
+
+        .card h2 {
+            font-size: 24px;
+            text-align: start;
+            line-height: 36px;
+        }
+
+        #QA {
+            background-color: #0A2818;
+            color: white;
+        }
+
+        .arrow {
+            width: 150px;
+            height: 150px;
+            background-image: url('./img/箭頭向上.png');
+            background-size: cover;
+            background-position: center;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        .footer {
+            width: 100%;
+            height: 440px;
+            background-color: #8EC21F;
+        }
+
+        #footer-btn {
+            width: 59%;
+            height: 200px;
+            float: none;
+            margin: auto;
+        }
+
+        .footer-news {
+            width: 62%;
+            height: 240px;
+            margin: auto;
+        }
+
+        .footer-contact {
+            float: left;
+            width: 60%;
+            height: 100%;
+        }
+
+        .QR-pack {
+            width: 20%;
+            height: 240px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .QR {
+            width: 130px;
+            height: 130px;
+            background-image: url('./img/農場QR.png');
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .footer-contact h3 {
+            line-height: 40px;
+        }
+
+        .link {
+            width: 40%;
+            height: 100%;
+            float: right;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+        }
+
+        .fb {
+            width: 45px;
+            height: 45px;
+            background-image: url('./img/facebook.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ig {
+            width: 45px;
+            height: 45px;
+            background-image: url('./img/instagram.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .wc {
+            width: 45px;
+            height: 45px;
+            background-image: url('./img/twitter.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .line {
+            width: 45px;
+            height: 45px;
+            background-image: url('./img/line.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        @media(max-width:768px) {
+            .ham {
+                display: inline-block;
+            }
+
+            .menu {
+                overflow: hidden;
+                transition: max-height 2.3s;
+                margin-top: 1px;
+                position: absolute;
+                z-index: 100;
+                top: 81px;
+                left: 0;
+                right: 0;
+                background: #0F222B;
+                display: block;
+                font-size: 48px;
+                line-height: 150px;
+            }
+
+            .menu li {
+                float: none;
+                border-bottom: 1px dashed #69CA62;
+                list-style: none;
+            }
+
+            .menu li a {
+                transition: all 0.3s;
+            }
+
+            .menu li a:hover {
+                background: #69CA62;
+                color: #fff;
+            }
+
+            .nav {
+                height: 100px;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .box-1 {
+                display: none;
+            }
+
+            .box-2 {
+                display: none;
+            }
+
+            .logo {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                right: calc(50% + 50px);
+            }
+
+            .logo-word {
+                height: 100px;
+                position: absolute;
+                left: calc(50% - 50px);
+                float: none;
+            }
+
+            .Botton {
+                display: none;
+            }
+
+            .ani {
+                width: 100%;
+            }
+
+            .dog {
+                width: 50%;
+                height: 50%;
+                border-radius: 0%;
+                background-image: url('./img/牧羊犬-1.jpeg');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .dog:hover .dog-word {
+                display: none;
+            }
+
+            .dog:hover .dog-detailed {
+                display: block;
+            }
+
+            .sheep {
+                width: 50%;
+                height: 50%;
+                border-radius: 0%;
+                background-image: url('./img/綿羊-2.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .sheep:hover .sheep-word {
+                display: none;
+            }
+
+            .sheep:hover .sheep-detailed {
+                display: block;
+            }
+
+            .sqiurrel {
+                width: 50%;
+                height: 50%;
+                border-radius: 0%;
+                background-image: url('./img/松鼠.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .sqiurrel:hover .sqiurrel-word {
+                display: none;
+            }
+
+            .sqiurrel:hover .sqiurrel-detailed {
+                display: block;
+            }
+
+            .cow {
+                width: 50%;
+                height: 50%;
+                border-radius: 0%;
+                background-image: url('./img/乳牛-2.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .cow:hover .cow-word {
+                display: none;
+            }
+
+            .cow:hover .cow-detailed {
+                display: block;
+            }
+
+            .plant {
+                height: 1680px;
+            }
+
+            #plant-pack {
+                width: 100%;
+            }
+
+            .kikuyu-all h1 {
+                padding: 70px;
+            }
+
+            .kikuyu-all span {
+                text-align: center;
+            }
+
+            .cedar-all h1 {
+                padding: 70px;
+            }
+
+            .cedar-all span {
+                text-align: center;
+            }
+
+            .ivy-all h1 {
+                padding: 70px;
+            }
+
+            .ivy-all span {
+                text-align: center;
+            }
+
+            .surr {
+                height: 1600px;
+            }
+
+            .mask-sur {
+                height: 1600px;
+            }
+
+            .farm {
+                width: 100%;
+                height: 45%;
+            }
+
+            .farm-1 {
+                width: 50%;
+                height: 100%;
+            }
+
+            .farm-2 {
+                width: 50%;
+                height: 100%;
+            }
+
+            .farm-3 {
+                width: 100%;
+                height: calc(55% - 50px);
+                top: 0;
+            }
+
+            .land-pack {
+                position: relative;
+                top: 100px;
+            }
+
+            .traffic {
+                height: 1600px;
+            }
+
+            .map {
+                width: 100%;
+                height: 50%;
+            }
+
+            .way {
+                width: 100%;
+                height: 50%;
+            }
+
+            .graph {
+                width: 100%;
+                height: 1080px;
+            }
+
+            .small-map {
+                width: 100%;
+            }
+
+            .picture {
+                width: 100%;
+            }
+
+            .camping {
+                background-image: none;
+            }
+
+            .service {
+                width: 100%;
+            }
+
+            .card-body ul li {
+                font-size: 24px;
+                text-align: center;
+            }
+
+            #footer-btn {
+                width: 60%;
+            }
+
+            #footer-btn .Botton {
+                display: block;
+            }
+
+            .footer-contact h3 {
+                font-size: 24px;
+            }
+        }
+
+
+        @media(max-width:360px) {
+            
+
+            h1 {
+                line-height: 150px;
+            }
+
+            .news {
+                height: 1000px;
+                background-image: url('./img/柵欄360.png');
+            }
+
+            .news .pack {
+                width: 100%;
+            }
+
+            .card-1 {
+                width: 100%;
+                height: 40%;
+                background: none;
+            }
+
+            .card-1 ol li {
+                font-size: 36px;
+                line-height: 60px;
+                position: relative;
+                left: 100px;
+            }
+
+            .card-2 {
+                width: 100%;
+                height: 40%;
+                background: none;
+            }
+
+            .card-2 ol li {
+                font-size: 36px;
+                line-height: 60px;
+                position: relative;
+                left: 100px;
+            }
+
+            .information {
+                height: 800px;
+                background: none;
+            }
+
+            .date {
+                width: 80%;
+            }
+
+            .event {
+                height: 150px;
+            }
+
+            .event span {
+                font-size: 48px;
+            }
+
+            .date .more {
+                width: 250px;
+                height: 100px;
+                font-size: 36px;
+                line-height: 80px;
+            }
+
+            .land {
+                height: 220vh;
+            }
+
+            .land-pack {
+                width: 100%;
+            }
+
+            .butterfly {
+                width: 45%;
+                height: 500px;
+            }
+
+            .butterfly-word {
+                width: 45%;
+
+            }
+
+            .ranch {
+                width: 45%;
+                height: 500px;
+            }
+
+            .ranch-word {
+                width: 45%;
+
+            }
+
+            .garden {
+                width: 45%;
+                height: 500px;
+            }
+
+            .garden-word {
+                width: 45%;
+
+            }
+
+            .sky {
+                width: 45%;
+                height: 500px;
+            }
+
+            .sky-word {
+                width: 45%;
+            }
+
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="nav">
+        <div class="ham">
+
+        </div>
+        <div class="box-1"></div>
+        <div class="logo"></div>
+        <div class="container">
+            <div class="logo-word"></div>
+            <div class="bottonbox">
+                <a href="#A" class="Botton">園區資訊</a>
+                <a href="#B" class="Botton">自然景觀</a>
+                <a href="#C" class="Botton">交通方式</a>
+                <a href="#D" class="Botton">特色產品</a>
+                <a href="#E" class="Botton">露營體驗</a>
+                <a href="#F" class="Botton">便民服務</a>
+
+            </div>
+        </div>
+        <div class="box-2"></div>
+    </div>
+
+    <ul class="menu">
+        <li><a href="#A">園區資訊</a></li>
+        <li><a href="#B">自然景觀</a></li>
+        <li><a href="#C">交通方式</a></li>
+        <li><a href="#D">特色產品</a></li>
+        <li><a href="#E">露營體驗</a></li>
+        <li><a href="#F">便民服務</a></li>
+    </ul>
+
+
+    </div>
+    <div id="banner" class="swiper-container">
+        <div class="swiper-wrapper">
+            <div id="img-1" class="swiper-slide"><span>一個讓你想把空氣都打包帶走的地方</span></div>
+            <div id="img-2" class="swiper-slide"><span>羊在身邊&nbsp;&nbsp;&nbsp;&nbsp;奶更新鮮</span></div>
+            <div id="img-3" class="swiper-slide"><span>原汁原味原生態&nbsp;&nbsp;&nbsp;&nbsp;好牛好乳好酪農</span></div>
+            <div id="img-4" class="swiper-slide"><span>看得見的天然&nbsp;&nbsp;&nbsp;&nbsp;喝得到得品質</span></div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <div class="seperate"></div>
+    <div id='A' class="tittle">園區資訊</div>
+    <div class="news">
+
+        <div class="pack">
+
+            <h1>入園須知(農場公約)</h1>
+
+            <div class="card-1">
+                <h1>維護環境</h1>
+                <ol>
+                    <li>牧場環境自然天成，烤肉、野炊及營火須於特定區域。</li>
+                    <li>自然、減碳、節能愛地球，也能享受夜空的靜美；烤肉區及營火區於晚上10點熄燈。</li>
+                    <li>一草一木皆生命，請勿攀爬樹木或雕塑物，及勿隨地丟垃圾。</li>
+                    <li>星火可以燎原，請勿使用桶裝瓦斯、燃放炮竹、天燈及私接電源等威脅牧場安全行為。</li>
+                </ol>
+
+            </div>
+            <div class="card-2">
+                <h1>動物保護</h1>
+                <ol>
+                    <li>牧場是動物的主角，請勿虐待或餵食非牧場提供的食物。 </li>
+                    <li>為保護牧場動物，進入園區寵物皆須繩繫牽引，請勿放開繩子。</li>
+                    <li>攜帶寵物進入園區請自備便便袋，讓便便不落地喔。</li>
+                    <li>配合動物防疫，進入園區的毛小孩，請配戴施打狂犬疫苗證明頸牌。</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="seperate"></div>
+    <div class="information">
+        <div class="mask">
+            <div class="date">
+
+                <span>最新消息</span>
+                <a href="" style="color: black;">
+                    <div class="event">
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;2019-11-15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自在農場特約店家優惠方案</span>
+                    </div>
+                </a>
+                <a href="" style="color: black;">
+                    <div class="event">
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;2019-11-15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;108年自在農場櫻花季預約訂房公告</span>
+                    </div>
+                </a>
+                <a href="" style="color: black;">
+                    <div class="event">
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;2019-11-15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;防治秋行軍蟲大家一起來</span>
+                    </div>
+                </a>
+
+                <div class="seperate"></div>
+
+                <a href="" style="color: black;">
+                    <div class="more"><a href="" style="color: black;"> 更多消息</a></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="seperate"></div>
+    <div id='B' class="tittle">自然景觀</div>
+
+    <div class="natural">
+        <h1>動物 Animalia</h1>
+    </div>
+
+    <div class="nat">
+
+        <div class="ani">
+            <div class="dog">
+                <div class="dog-detailed">
+                    <h2>邊境牧羊犬</h2>
+                    <h3>又名蘇格蘭牧羊犬，是一種原產自蘇格蘭和英格蘭邊界一帶的牧羊犬，主要協助農場放牧，故稱牧羊犬。邊境牧羊犬以精力旺盛且容易學習雜技運動而聞名，且被學界認為是最聰明的犬種。</h3>
+                </div>
+                <div class="dog-word"></div>
+            </div>
+            <div class="sheep">
+                <div class="sheep-detailed">
+                    <h2>綿羊</h2>
+                    <h3>亦稱為家羊或白羊，屬哺乳綱偶蹄目牛科羊亞科，是一種四足反芻哺乳動物。綿羊是群居動物，有強烈的群居性，許多羊的行為都可以以此為基礎來瞭解。</h3>
+                </div>
+                <div class="sheep-word"></div>
+            </div>
+            <div class="sqiurrel">
+                <div class="sqiurrel-detailed">
+                    <h2>松鼠</h2>
+                    <h3>一般以草食性為主，食物主要是種子和果仁，也會吃鳥蛋、水果如櫻桃等。部分物種會食昆蟲，其中一些熱帶物種更會為捕食昆蟲而進行遷徙，甚至叼走山雀雛鳥。</h3>
+                </div>
+                <div class="sqiurrel-word"></div>
+            </div>
+            <div class="cow">
+                <div class="cow-detailed">
+                    <h2>荷蘭牛</h2>
+                    <h3>又稱作"荷仕登"皮薄脂肪少，被毛短而光亮，尾長而細。母牛後軀較前軀發達，乳房大而豐滿，乳靜脈粗而彎曲。荷蘭牛性情溫和，成熟母牛體重 650 公斤以上優質母牛每年可產乳量達 10,000
+                        公斤以上。</h3>
+                </div>
+                <div class="cow-word"></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="seperate"></div>
+    <div class="plant">
+
+        <div id='plant-pack' class="pack">
+            <div class="natural">
+                <h1>植物 Plantae</h1>
+            </div>
+
+            <div class="kikuyu-all">
+                <div class="kikuyu"></div>
+                <h1>舖地狼尾草</h1>
+                <h4>又名克育草，原產東非，匐匍莖與地下莖發達，生長旺盛，是臺灣水土保持、護坡、放牧用草；場區美麗的草原，是同仁一株株手工栽種，加上羊隻適度踩踏的成果。</h4>
+            </div>
+
+            <div class="cedar-all">
+                <div class="cedar"></div>
+                <h1>肖楠</h1>
+                <h4>含高量的扁柏醇，具抗菌效果，可提振精神，舒緩情緒；樹形長錐狀，樹皮紅褐色，小枝扁平且節間長，鱗狀葉十字對生，毬果長橢圓形。</h4>
+            </div>
+
+            <div class="ivy-all">
+                <div class="ivy"></div>
+                <h1>常春藤</h1>
+                <h4>為五加科常春藤屬多年生常綠藤本觀葉植物，是典型的陰生藤本植物，莖木質化，長可達 3~5 公尺，多分枝，莖上有氣生根。</h4>
+            </div>
+        </div>
+
+    </div>
+    <div class="seperate"></div>
+    <div class="natural">
+        <h1>環境 Surroundings</h1>
+    </div>
+    <div class="surr">
+        <div class="mask-sur">
+            <div class="farm">
+                <div class="farm-1"></div>
+                <div class="farm-2"></div>
+            </div>
+            <div class="farm-3"></div>
+        </div>
+    </div>
+
+    <div class="land">
+        <div class="natural">
+            <h1>風景 Landscape</h1>
+        </div>
+        <div class="land-pack">
+
+            <div class="butterfly"></div>
+            <div class="ranch"></div>
+            <div class="butterfly-word">大自然劇場</div>
+            <div class="ranch-word">觀山牧區</div>
+            <div class="garden"></div>
+            <div class="sky"></div>
+            <div class="garden-word">小瑞士花園</div>
+            <div class="sky-word">天空步道</div>
+        </div>
+
+    </div>
+
+    <div class="seperate"></div>
+    <div id='C' class="tittle">交通方式</div>
+
+    <div class="traffic">
+        <div class="bus">
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14573.684715242653!2d121.16038788476526!3d24.05146838080712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468c2110152ab77%3A0x6a1ce9e22cfb5a1c!2z5riF5aKD6L6y5aC0!5e0!3m2!1szh-TW!2stw!4v1576654339820!5m2!1szh-TW!2stw"
+                    width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+            <div class="seperate"></div>
+
+            <div class="way">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>第一段</th>
+                        <th>第二段</th>
+                        <th>第三段</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">火車</td>
+                        <td rowspan="2">搭乘火車至台中火車站</td>
+                        <td>轉乘南投客運或全航客運至埔里站</td>
+                        <td>第二段若是先搭乘至埔里站，需再從埔里站搭乘南投客運(6658、6659、6684)至自在</td>
+                    </tr>
+                    <tr>
+                        <td>轉乘南投客運 台中-自在無縫專車</td>
+                        <td>無</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">高鐵</td>
+                        <td rowspan="2">搭乘高鐵至台中高鐵</td>
+                        <td>至5號出口的第3月台轉乘南投客運(6670)至埔里</td>
+                        <td>若是先搭乘至埔里需要再轉乘南投客運(6658、6659、6684)至自在</td>
+                    </tr>
+                    <tr>
+                        <td>至5號出口的第3月台轉乘南投客運台中-自在無縫專車</td>
+                        <td>無</td>
+
+                    </tr>
+                    <tr>
+                        <td rowspan="2">客運</td>
+                        <td>搭乘國光客運1832、1832A至埔里站</td>
+                        <td>轉乘南投客運(6658、6659、6684)至自在</td>
+                        <td>無</td>
+                    </tr>
+                    <tr>
+                        <td>搭乘統聯清境接駁巴士直接到自在農場</td>
+                        <td>無</td>
+                        <td>無</td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <h1>地圖簡介</h1>
+
+    <div class="graph">
+        <div class="small-map"></div>
+    </div>
+
+    <div class="seperate"></div>
+    <div id='D' class="tittle">特色產品</div>
+    <div class="goods">
+
+        <div id="jquery-tabs" style="width:auto">
+
+            <div id="tabs-nav">
+                <a href="#tab0" class="tabs-menu tabs-menu-active">乳製品</a>
+                <a href="#tab1" class="tabs-menu">花草精油</a>
+            </div>
+
+            <div class="tabs-container">
+                <div id="tab0" class="tabs-panel" style="display:block">
+                    <div class="milk"></div>
+                    <div class="goat"></div>
+                    <div class="cream"></div>
+                    <div class="milk-word">牛奶</div>
+                    <div class="goat-word">羊奶</div>
+                    <div class="cream-word">奶油</div>
+                    <div class="cheese"></div>
+                    <div class="condensed"></div>
+                    <div class="jelly"></div>
+                    <div class="cheese-word">起司</div>
+                    <div class="condensed-word">煉乳</div>
+                    <div class="jelly-word">奶酪</div>
+                </div>
+
+                <div id="tab1" class="tabs-panel">
+                    <div class="lavender"></div>
+                    <div class="tea"></div>
+                    <div class="lavender-word">薰衣草精油</div>
+                    <div class="tea-word">茶樹精油</div>
+                    <div class="lemon"></div>
+                    <div class="mint"></div>
+                    <div class="lemon-word">檸檬精油</div>
+                    <div class="mint-word">薄荷精油</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id='E' class="tittle">露營體驗</div>
+
+    <div class="camping">
+
+        <div class="picture">
+
+            <div id="banner" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div id='camping-1' class="swiper-slide"></div>
+                    <div id='camping-2' class="swiper-slide"></div>
+                    <div id='camping-3' class="swiper-slide"></div>
+                    <div id='camping-4' class="swiper-slide"></div>
+
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+
+        </div>
+        <div class="pic-note">
+
+        </div>
+
+        <div class="note">
+            <div class="note-1">
+                <span>露營時間</span>
+                <br>
+                <br>
+                <span>可攜物品</span>
+                <br>
+                <br>
+                <span>注意事項</span>
+                <br>
+                <br>
+                <span>拖車出租</span>
+                <br>
+                <br>
+                <span>帳篷出租</span>
+            </div>
+            <div class="note-2">
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;下午3點至隔日中午12點</span>
+                <br>
+                <br>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;1.防蚊液&nbsp;&nbsp;2.睡袋&nbsp;&nbsp;3.照明工具&nbsp;&nbsp;4.摺疊桌&nbsp;&nbsp;5.換洗衣物</span>
+                <br>
+                <br>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;1.確定露營人數即年齡&nbsp;&nbsp;2.打理裝備確實&nbsp;&nbsp;3.營地的選擇</span>
+                <br>
+                <br>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;露營區拖車(出租)，假日3600元/輛，平日3000元/輛</span>
+                <br>
+                <br>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;草地帳篷營位(出租)，假日650元/位，平日450元/位</span>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="seperate"></div>
+    <div id='F' class="tittle">便民服務</div>
+    <h1>旅客須知</h1>
+
+    <div class="service">
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" id='safe' type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                            style="color: black;">
+                            自在農場安全須知
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                    data-parent="#accordionExample">
+                    <div class="card-body">
+                        <ul>
+                            <li>園區坡度陡峭，請勿讓孩童自行奔跑。</li>
+                            <li>園區內請循步道前進，以策安全。</li>
+                            <li>使用遊樂設施請遵照使用限制。</li>
+                            <li>園內禁止使用空拍飛行器、生火、煮食、滑草及攜帶寵物進入。</li>
+                            <li>發生事故時，請立即聯繫服務人員處理。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" id='insurance' type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                            style="color: black;">
+                            遊憩區投保公共安全責任險
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <ul>
+                            <li>為維護遊客在遊憩區的安全，本農場除設置安全警告標示提醒訪客注意外，並投保『公共安全責任險』，保障遊客意外理賠，最高理賠新台幣二百萬元。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" id='manage' type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                            style="color: black;">
+                            合法經營
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <ul>
+                            <li>自在農場遊憩區為領有交通部觀光局核發之合格標章風景遊樂區。</li>
+                            <li>自在農場國民賓館領有全國旅館事業協會所發之合法旅館標章，並取得交通部觀光局三星級旅館標章。</li>
+                            <li>各收費據點均設置稅捐處列管之收銀機，任何消費均開立統一發票。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="seperate"></div>
+    <div class="mail">
+        客服信箱
+        <div class="contact">
+            <h2>客服信箱之信件本場於收到之次日起兩個工作天內處理完畢並直接回覆，如為旅遊資訊查詢、一般詢問、訂房查詢等內容由本場逕行予以回覆，涉及不雅文字、謾罵、誨謗等內容則予以刪除處理。</h2>
+            <h2>自在農場體驗活動諮詢：</h2>
+            <h2>洽詢專線：+886-49-2802222 #2272 陳小姐</h2>
+            <h2>聯絡信箱：qingjingpackage@gmail.com</h2>
+        </div>
+    </div>
+    <div class="seperate"></div>
+
+    <div class="problem">
+        常見問題
+
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" id='question-1' type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                            style="color: black;">
+                            Q1.自在農場可以使用「國民旅遊卡」嗎?
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                    data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h2> 清境農場國民賓館及青青草原為國民旅遊卡特約商店，凡住宿（附青青草原及小瑞士花園門票）、用餐，購買紀念品均可使用國民旅遊卡。</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" id='question-2' type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                            style="color: black;">
+                            Q2.自在農場商品是否可以退貨?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h2>根據照消費者保護法規定，消費者享有商品到貨後七天猶豫期之權益。</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" id='question-3' type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                            style="color: black;">
+                            Q3.農場是否有提供導覽解說?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h2>本場有志工提供帶團導覽解說服務(須15人以上)預約流程：</h2>
+                        <h2>團體申請後→申請人致電本場→承辦人電話再次確認行程地點及時間→安排導覽員</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="seperate"></div>
+        <div id='QA' class="more"><a href="" style="color: white;">更多Q&A</a></div>
+    </div>
+
+
+    <div class="footer">
+
+        <div id='footer-btn' class="bottonbox">
+            <a href="#A" class="Botton">園區資訊</a>
+            <a href="#B" class="Botton">自然景觀</a>
+            <a href="#C" class="Botton">交通方式</a>
+            <a href="#D" class="Botton">特色產品</a>
+            <a href="#E" class="Botton">露營體驗</a>
+            <a href="#F" class="Botton">便民服務</a>
+        </div>
+        <div class="footer-news">
+            <div class="footer-contact">
+                <div class="QR-pack">
+                    <div class="QR"></div>
+                </div>
+
+                <h3>&nbsp;&nbsp;農場本部&nbsp;&nbsp;:&nbsp;&nbsp;南投縣仁愛鄉仁和路170號</h3>
+                <h3>&nbsp;&nbsp;訂房、訂餐&nbsp;&nbsp;:&nbsp;&nbsp;049-2802748</h3>
+                <h3>&nbsp;&nbsp;客服信箱&nbsp;&nbsp;:&nbsp;&nbsp;cingjing@ms93.url.com.tw</h3>
+                <h3>&nbsp;&nbsp;開放時間&nbsp;&nbsp;:&nbsp;&nbsp;平日&nbsp;&nbsp;&nbsp;&nbsp;07:00~17:00</h3>
+                <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;假日&nbsp;&nbsp;&nbsp;&nbsp;07:00~18:00
+                </h3>
+
+            </div>
+            <div class="link">
+                <div class="fb"></div>
+                <div class="ig"></div>
+                <div class="wc"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <a href="#">
+        <div class="arrow"></div>
+    </a>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+    <script>
+
+
+
+
+
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+
+
+
+
+
+
+
+        $(function () {
+            $("#tabs-nav a").click(function () {
+                $("#tabs-nav a").removeClass("tabs-menu-active");
+                $(this).addClass("tabs-menu-active");
+                $(".tabs-panel").hide();
+                var tab_id = $(this).attr("href");
+                $(tab_id).fadeIn();
+                return false;
+            });
+        });
+
+
+
+
+        var menu = document.querySelector(".menu")
+        var ham = document.querySelector(".ham")
+
+        ham.onclick = function () {
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            }
+            else {
+                menu.style.display = "block";
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
